@@ -1,0 +1,44 @@
+{
+  "c2_wick": {
+    "canvas_in": [
+      1.316,
+      1.82
+    ],
+    "axes_offset_in": [
+      0.36,
+      0.3
+    ],
+    "axes_size_in": [
+      0.896,
+      1.1
+    ]
+  },
+  "c4_chrono": {
+    "canvas_in": [
+      1.316,
+      1.82
+    ],
+    "axes_offset_in": [
+      0.36,
+      0.3
+    ],
+    "axes_size_in": [
+      0.896,
+      1.1
+    ]
+  },
+  "c5_accum": {
+    "canvas_in": [
+      1.316,
+      1.82
+    ],
+    "axes_offset_in": [
+      0.36,
+      0.3
+    ],
+    "axes_size_in": [
+      0.896,
+      1.1
+    ]
+  }
+}
