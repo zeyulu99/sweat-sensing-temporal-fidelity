@@ -1,13 +1,12 @@
 {
-  "n_files": 88,
-  "total_MB": 10.54,
+  "n_files": 96,
+  "total_MB": 11.12,
   "files": [
     ".gitignore",
     ".zenodo.json",
     "CITATION.cff",
     "LICENSE",
     "LICENSE-CC-BY-4.0.txt",
-    "MANIFEST.json",
     "README.md",
     "code/LICENSE-NOTICE.md",
     "code/python/build_fig2b_panel_variants.py",
@@ -24,6 +23,7 @@
     "code/python/plot_fig4_layout.py",
     "code/python/plot_fig4_validation.py",
     "code/python/rebuild_fig2b_contrast.py",
+    "code/python/run_analytic_laplace.py",
     "code/python/run_evidence_closure_analysis.py",
     "code/python/run_round2_analyses.py",
     "code/python/run_waveform_topology_analysis.py",
@@ -89,6 +89,14 @@
     "outputs/revision_2026-09-22/round2_analyses/D_fmc_chrono_empirical.csv",
     "outputs/revision_2026-09-22/round2_analyses/meta.json",
     "outputs/revision_2026-09-23/figure2b_contrast/README.md",
+    "outputs/revision_2026-10-27/analytic/A_periodic_exact_vs_numeric.csv",
+    "outputs/revision_2026-10-27/analytic/B_convergence.csv",
+    "outputs/revision_2026-10-27/analytic/C_ramp_rule_vs_numeric.csv",
+    "outputs/revision_2026-10-27/analytic/D_pulse_moment_vs_numeric.csv",
+    "outputs/revision_2026-10-27/analytic/E_design_rules.csv",
+    "outputs/revision_2026-10-27/analytic/figS_analytic_vs_numeric.pdf",
+    "outputs/revision_2026-10-27/analytic/figS_analytic_vs_numeric.png",
+    "outputs/revision_2026-10-27/analytic/figS_analytic_vs_numeric.svg",
     "requirements.txt"
   ]
 }

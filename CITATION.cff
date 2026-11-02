@@ -16,7 +16,7 @@ authors:
     given-names: Shinjiro
     email: umeshin@waseda.jp
     affiliation: "Department of Modern Mechanical Engineering, Waseda University, Tokyo, Japan"
-abstract: "Transport and sensor models, parameter grids, empirical stress tests, and figure scripts for the Perspective From Sensitivity to Temporal Fidelity in Wearable Sweat Sensing. Code is released under MIT; data files are released under CC BY 4.0."
+abstract: "Transport and sensor models, parameter grids, empirical stress tests, and figure scripts for the Perspective From Sensitivity to Temporal Fidelity in Wearable Sweat Sensing. These materials support a peer-reviewed opinion and review article and contain no new experimental data: every file is a model output or a set of coordinates digitized from published figures. Code is released under MIT; data files are released under CC BY 4.0."
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 keywords:
@@ -26,5 +26,7 @@ keywords:
   - residence-time distribution
   - microfluidics
   - sensor kinetics
-version: "1.0.0"
-date-released: "2026-09-24"
+doi: "10.5281/zenodo.22932238"
+repository-code: "https://github.com/zeyulu99/sweat-sensing-temporal-fidelity"
+version: "1.1.0"
+date-released: "2026-11-02"

@@ -449,6 +449,19 @@ def plot_reportable(ax, key, r, first):
         a, b, v, lo, hi = r["accum"]
         ax.plot([a, b], [v, v], color=col, lw=LW_OUT + 0.4,
                 solid_capstyle="butt", zorder=3)
+    # every column keys its own reported quantity (the fmc column has its own)
+    out_label = {"through": "reported", "wick": "reported",
+                 "chrono": "window mean", "accum": "interval mean"}
+    if key in out_label:
+        lw = LW_OUT if key in ("through", "wick") else LW_OUT + 0.4
+        ax.legend(handles=[
+            Line2D([], [], color=GRAY, lw=LW_REF, ls=(0, (3, 2)),
+                   label="input"),
+            Line2D([], [], color=col, lw=lw, solid_capstyle="butt",
+                   label=out_label[key])],
+            loc="upper right", fontsize=FS_NOTE, frameon=False,
+            handlelength=1.6, handletextpad=0.3, labelspacing=0.3,
+            borderaxespad=0.1, borderpad=0.1)
     ax.set_xlim(0, T_END)
     ax.set_ylim(0, 1.12)
     ax.set_xticks([0, 60, 120])
@@ -458,14 +471,6 @@ def plot_reportable(ax, key, r, first):
         ax.set_xlabel("Time (min)", fontsize=FS_TICK, labelpad=1.0,
                       loc="left")
         ax.set_ylabel("Concentration (a.u.)", fontsize=FS_TICK, labelpad=1.5)
-        # the encoding is the same in every column, so it is keyed once
-        ax.legend(handles=[
-            Line2D([], [], color=GRAY, lw=LW_REF, ls=(0, (3, 2)),
-                   label="input"),
-            Line2D([], [], color=col, lw=LW_OUT, label="reported")],
-            loc="upper right", fontsize=FS_NOTE, frameon=False,
-            handlelength=1.6, handletextpad=0.3, labelspacing=0.3,
-            borderaxespad=0.1, borderpad=0.1)
 
 
 def draw_original_row_a(cv, key, ox):

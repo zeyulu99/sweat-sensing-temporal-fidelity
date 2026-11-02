@@ -1,5 +1,7 @@
 # Temporal fidelity in wearable sweat sensing: code and data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22932238.svg)](https://doi.org/10.5281/zenodo.22932238)
+
 Code and machine-readable outputs for the Perspective *From Sensitivity to
 Temporal Fidelity in Wearable Sweat Sensing* (submitted to ACS Sensors).
 
@@ -25,6 +27,8 @@ python run_waveform_topology_analysis.py       # empirical stress test (1,295 ru
 python run_round2_analyses.py                  # envelopes at two sensor constants,
                                                # volume budget, time-varying flux,
                                                # fill-measure-clear and window results
+python run_analytic_laplace.py                 # Laplace-domain solutions: exact periodic
+                                               # envelopes, ramp and pulse rules, convergence
 ```
 
 Scripts resolve paths relative to the repository root, so they run unchanged
@@ -41,6 +45,7 @@ outputs/
   revision_2026-08-31_figure2_data_package/    released grids and empirical results
   figure_working/figure2_strategy_comparison_2026-09-09/data/   dense boundary grid
   revision_2026-09-22/round2_analyses/         second-round analyses
+  revision_2026-10-27/analytic/                Laplace-domain solutions (minor revision)
   figures_final/figure2_placement_ready/data/  per-panel curve values
   revision_2026-09-1*/ and 2026-09-2*/         per-figure values and parameters
 ```
@@ -52,6 +57,8 @@ outputs/
 | `transport_fidelity_models.py` | plug-flow, well-mixed and gamma RTD transport, first-order sensor, fill--measure--clear and chronological-window models |
 | `01_canonical_primary_grid_1080.csv` | canonical grid, 3 waveforms x 5 timescales x 3 topologies x 6 transport times x 4 sensor constants |
 | `02_canonical_extended_grid_1620.csv` | same grid extended to transport times of 0.05, 0.10 and 0.25 min |
+| `run_analytic_laplace.py` | transfer functions of the cascade; exact periodic scores, ramp and pulse rules, and their comparison with the numerical grid |
+| `analytic/A_*.csv`–`E_*.csv`, `figS_analytic_vs_numeric.*` | exact versus numerical boundaries, convergence with time step, design rules; Figure S1 of the Supporting Information |
 | `canonical_dense_boundary_grid_tau_sensor_1min.csv` | 71 transport times at a 1 min sensor constant; the grid plotted in Fig. 2c |
 | `07_empirical_stress_test_full_1295.csv` | seven digitized traces against 185 parameter settings |
 | `round2_analyses/A_*.csv` | envelopes at sensor constants of 0 and 1 min, binding criterion per cell, delay-aligned scores |
@@ -89,16 +96,15 @@ publishers.
 
 ## Citing this archive
 
-`CITATION.cff` carries the machine-readable citation, and `.zenodo.json`
-carries the deposit metadata used when a release is archived. Please cite both
-this archive and the Perspective it accompanies.
+This archive is deposited at https://doi.org/10.5281/zenodo.22932238 (this DOI always resolves to the latest version). `CITATION.cff` carries the
+machine-readable citation and `.zenodo.json` the deposit metadata. Please cite
+both this archive and the Perspective it accompanies.
 
-## Before publishing this repository
+> Lu, Z.; Montagut Marques, M. J.; Hirose, K.; Umezu, S. Temporal fidelity in
+> wearable sweat sensing: code and data, v1.1.0. Zenodo, 2026.
+> https://doi.org/10.5281/zenodo.22932238
 
-1. Archive a release on Zenodo to obtain a DOI, then insert the DOI in the
-   manuscript Data and Code Availability statements, which currently carry a
-   placeholder.
-2. Confirm that redistributing the digitized coordinates is compatible with the
-   source publishers' terms.
-3. Check the author list and affiliations in `CITATION.cff` and `.zenodo.json`,
-   and add ORCID identifiers if you want them shown on the Zenodo record.
+## Version history
+
+- v1.1.0 (2026-11-02): Laplace-domain solutions of the transport–sensor cascade (`run_analytic_laplace.py`, `outputs/revision_2026-10-27/analytic/`); legends on every column of Figure 3c.
+- v1.0.0 (2026-09-24): first release.
